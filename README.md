@@ -27,3 +27,7 @@ Linux Ubuntu/Debian/Mint :
 If you want to reward my work, or thank me, then you can [donate](http://vpnlifeguard.blogspot.fr/p/faire-un-don.html) a few dollars [HERE](http://vpnlifeguard.blogspot.fr/p/faire-un-don.html) and I'll be very happy!
 
 ### VPN Lifeguard official website >>> [LINK](http://vpnlifeguard.blogspot.fr/p/english.html)
+
+
+
+VPN Lifeguard - Open source GNU/GPL - Copyright 2010 Philippe734
