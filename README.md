@@ -28,6 +28,6 @@ If you want to reward my work, or thank me, then you can [donate](http://vpnlife
 
 ### VPN Lifeguard official website >>> [LINK](http://vpnlifeguard.blogspot.fr/p/english.html)
 
+<>
 
-
-VPN Lifeguard - Open source GNU/GPL - Copyright 2010 Philippe734
+*VPN Lifeguard - Open source GNU/GPL - Copyright 2010 Philippe734*
