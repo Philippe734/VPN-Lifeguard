@@ -1,0 +1,231 @@
+ 
+[frmMain]
+frmMain.caption=VPN Lifeguard
+chkDecoOFF.ToolTipText=Laissez cette option activée si vous avez activé l'option VPN exclusif. Déconnexion du VPN et rétablie la route principale en quittant. Sinon la route ne sera pas rétablie empêchant la reconnexion ultérieur au vpn.
+cmdConfigurer.ToolTipText=Configure les adresses IP et la liste des applications à gérer
+cmdAbout.ToolTipText=À propos de...
+cmdQuitter.Caption=Quitter
+cmdQuitter.ToolTipText=Déconnecte le VPN puis quitte
+cmdDemarrer.Caption=Démarrer
+cmdDemarrer.ToolTipText=Démarre la connexion du VPN sélectionné dans la liste
+cmdArreter.Caption=Arrêter
+cmdArreter.ToolTipText=Arrête la surveillance du VPN et le déconnecte
+lbl(1).Caption=Applications à gérer
+Frame2.Caption=IP local du VPN
+listConnexionsReseaux.ToolTipText=Connexions VPN disponibles. Sélectionnez celle du VPN
+lbl(0).Caption=Liste des réseaux
+lblIpVpn.Caption=IP locale du VPN : xxx.xxx.xxx.xxx
+lblStatut.Caption=Service arrêté
+mnuPopupDelRoute.Caption=Rendre le VPN exclusif
+mnuPopupAbout.Caption=À propos
+mnuPopupArreter.Caption=Arrêter VPN
+mnuPopupResetVPN.Caption=Réinitialiser VPN
+mnuPopupLog.Caption=Consulter le log
+mnuPopupCheckUpdate.Caption=Vérifier les mises à jour
+mnuPopupWidget.Caption=Afficher le widget
+mnuPopupShowMe.Caption=Afficher l'interface
+mnuPopupQuit.Caption=Quitter
+
+
+ 
+[modGlobal]
+ 
+[frmAbout]
+frmAbout.Caption=À propos de...
+cmdSiteWeb.Caption=Site web
+cmdQuit.Caption=Fermer
+lblInfo(0).Caption=Merci d'utiliser ce logiciel publié gratuitement. Permet de reconnecter automatiquement son VPN, tout en bloquant les logiciels de son choix. Sur le site web, vous pourrez consulter les améliorations en cours, l'historique des changements ou me contacter. Si vous souhaitez me remercier et encourager mon travail, alors vous pouvez me faire un don. Merci aux membres de vbfrance pour leurs aides.
+lblNotice.Caption=Notice
+lblURL(1).Caption=Faire un don
+lblURL(1).ToolTipText=Par CB ou Paypal
+lblURL(0).Caption=Dernière version et code source
+
+
+ 
+[modFichierINI]
+ 
+[modKillProcess]
+ 
+[modRasFunction]
+ 
+[frmMessageErreur]
+cmdQuitter.ToolTipText=Renvoie au formulaire de http://vpnlifeguard.blogspot.com en copiant l'erreur
+
+
+ 
+[modGestionErreur]
+ 
+[modPingICMP2]
+ 
+[frmConfig]
+frmConfig.caption=Configuration et options
+CheckLog.Caption=Log de déconnexion
+CheckLog.ToolTipText=Sauvegarde l'historique des déconnexions et connexions
+CheckWidget.Caption=Afficher le widget au lancement
+CheckWidget.ToolTipText=Objet qui change de couleur en fonction de la connexion
+CheckCloseAppliOnQuit.Caption=Fermer les applications gérées en quittant
+CheckIconQuit.Caption=Réduire au lieu de quitter par la croix
+CheckIconQuit.ToolTipText=En cliquant sur le bouton croix en haut à droite, permet de réduire le programme en icône dans le systray plutôt que de le quitter
+CheckAdressIPproblem.Caption=En cas de problème
+CheckAdressIPproblem.ToolTipText=Cochez cette case si votre VPN connecté n'est pas listé
+cmdAjouterAppli.Caption=Parcourir...
+CheckSecuTunnel.Caption=VPN exclusif
+CheckSecuTunnel.ToolTipText=Être sûr de passer par le VPN
+Label(5).Caption=Connexion VPN exclusive 
+labelInfoSecuTunnel.Caption=Être sûr de passer par le VPN. Rend la connexion VPN exclusive en supprimant la route de la connexion internet principale. De cette manière, toutes les données de votre pc allant vers internet passent forcement par le VPN. La route est rétablie en cas de déconnexion pour reconnecter le VPN mais est ensuite re-supprimée. Technique connue via les scripts Del route / Add route. Nécessite de bien configurer l'IP de la passerelle. La passerelle est en générale votre box internet.
+CheckAutoReduire.Caption=Réduire au lancement
+CheckAutoReduire.ToolTipText=Se réduit en icône au lancement du programme
+cmdUpdate.Caption=Vérifer la dernière version
+Label(4).Caption=Mise à jour 
+checkDynamiqueIPvpn.Caption=VPN à IP dynamique
+ComboDefautIP.ToolTipText=Correspond à l'adresse IP de votre PC
+cmdFermer.Caption=Fermer
+CheckAutoAppli.Caption=Démarrer les applications
+CheckAutoAppli.ToolTipText=Démarre les applications cochées au démarrage du programme
+CheckAutoWin(1).Caption=Démarrer au lancement
+CheckAutoWin(1).ToolTipText=Démarre la connexion du VPN à l'ouverture du programme
+CheckAutoWin(0).Caption=Lancer avec windows
+CheckAutoWin(0).ToolTipText=Lance le programme au démarrage de windows sans pour autant démarrer la connexion au VPN
+Label(9).Caption=Autodémarrage 
+Label(8).Caption=Liste 
+Label(7).Caption=Nombre : 
+Label(6).Caption=Applications à gérer 
+cmdIpConfig.ToolTipText=Ouvre IPCONFIG
+cmdListerIP.Caption=Lister IP
+cmdListerIP.ToolTipText=Récupère les adresses IP de la passerelle et du VPN connecté.
+ComboPasserelleIP.ToolTipText=Correspond à l'adresse IP de votre box internet. Si le programme ne parvient pas à la trouver, alors sélectionnez 127.0.0.1
+Label(3).Caption=IP de la box 
+Label(0).Caption== de la passerelle = du routeur
+ComboVpnIP.ToolTipText=Adresse IP locale du VPN
+Label(2).Caption=IP locale du VPN 
+labelChoixIP.Caption=Sélectionnez ou confirmez les adresses IP
+Label(1).Caption=Adresses IP 
+LabelTutoURL.Caption=Consulter l'aide du site web
+Label(10).Caption=Divers
+
+
+ 
+[CCommonDialog]
+ 
+[CDownloader]
+ 
+[CGetOthersIp]
+ 
+[CSortArray2Col]
+ 
+[CGetIpgateway]
+ 
+[CIsAlreadyRunning]
+ 
+[CShortcut]
+ 
+[CDelIconSystray]
+ 
+[CRouteAddDell]
+ 
+[CIsInIde]
+ 
+[CMultithreadingRasdial]
+ 
+[CMultithreadingCallBack]
+
+
+ 
+[CMultithreadingSet]
+ 
+[modSystray]
+ 
+[frmCheckUpdate]
+LabelInfo.Caption=  Connexion aux serveurs SourceForge en cours...
+
+
+ 
+[CUpdate]
+ 
+[frmWidget]
+picBlack.ToolTipText=Connecté
+picRed.ToolTipText=Déconnecté
+cmdQuit.Caption=Quitter
+
+
+ 
+[CWidget]
+[Strings]
+0001=Adresses IP contrôlées :
+0002=Fermeture en cours...
+0003=Fermeture en cours...
+0004=Aucun Log présent. Vous pouvez le créer en l'activant dans les options.
+0005=IP locale du VPN : 
+0006= déconnexion
+0007= déconnexions
+0008=Chargement des appli...
+0009= déconnexion
+0010= déconnexions
+0011=Déconnexion mais reconnexion en cours...
+0012=Fermeture des appli...
+0013=Connexion en cours...
+0014=IP locale du VPN :  . . .
+0015=Connexion effectuée
+0016=Aucune connexion VPN présente. Le programme ne fonctionne qu'avec les connexions VPN affichées dans 
+0017=connexion réseau
+0018= de windows mais pas avec celle de type OpenVPN. Donc, si vous avez une connexion VPN, alors elle est peut-être de ce type.
+0019=Aie ! Connexion VPN absente
+0020=Internet inaccessible
+0021=En attente d'Internet...
+0022=En attente d'Internet...
+0023=Service arrêté
+0024=Connexion en cours...
+0025=Connexion impossible, veuillez réessayer plus tard.
+0026=Actif
+0027=Actualisation...
+0028=Arrêt en cours...
+0029=Déconnexion en cours...
+0030=Déconnecté
+0031=Service arrêté
+0032=Service arrêté
+0033=Puisque c'est votre 1er lancement alors
+0034=cliquez sur cette zone pour configurer
+0035=Service arrêté
+0036=Cliquez sur 'Configurer' pour lister les IP et sélectionnez celle du VPN
+0037=Fermeture de 
+0038=IP locale du VPN : 
+0039=IP locale du VPN : 
+0040=Service arrêté
+0041=Vous devez exécuter le programme en tant qu'administrateur
+0042=Clic droit sur le programme... exécuter en tant que...
+0043=Le fichier exécutable a été renommé. Veuillez ne démarrer que VpnLifeguard.exe
+0044= - erreur
+0045=Une version plus récente est disponible. Voulez-vous la télécharger ?
+0046=Mise à jour
+0047=Si vous rencontrez une erreur, alors pensez à faire la mise à jour.
+0048=Mise à jour conseillée
+0049=C'est bon, vous avez la dernière version ;-)
+0050=Mise à jour inutile
+0051=Si vous ne voulez pas m'envoyer le rapport d'erreur, alors cliquez sur ok.
+0052=Pour me l'envoyer, cliquez sur annuler.
+0053=Impossible de créer le Handle du Ping
+0054=Fichiers exécutables (*.exe)|*.exe|
+0055=Ajouter l'application n°
+0056=Démarrer le VPN, puis cliquez sur 'Lister'.
+0057=Effacer liste
+0058=Parcourir...
+0059=IP dynamique = Qui change à chaque connexion. Cochez cette case si le programme ne parvient pas à rétablir la connexion en cas de déconnexion.
+0060=Si vous voulez configurer, alors cliquez sur annuler.
+0061=Veuillez choisir l'IP du VPN
+0062=Veuillez choisir l'IP de la passerelle ou la saisir
+0063=Veuillez ajouter les applications à gérer
+0064=Impossible de contacter les serveurs
+0065=Err type : 
+0066=  Comparaison des versions...
+0067=  Dernière version online = 
+0068=Une version plus récente est disponible. Voulez-vous la télécharger ?
+0069=Mise à jour
+0070=Si vous rencontrez une erreur, alors pensez à faire la mise à jour.
+0071=Mise à jour conseillée
+0072=C'est bon, vous avez la dernière version ;-)
+0073=Mise à jour inutile
+0074=Masquer
+0075=Connecté
+0076=Déconnecté
+0077=Dernière déconnexion à
+0078=le

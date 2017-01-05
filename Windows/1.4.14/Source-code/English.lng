@@ -1,0 +1,235 @@
+ 
+[frmMain]
+frmMain.caption=VPN Lifeguard
+cmdPing.Caption=Check IP
+chkDecoOFF.ToolTipText=Disconnects VPN on exit. Recommend keeping checked
+cmdConfigurer.ToolTipText=Configure IP addresses and softwares to manage
+cmdAbout.ToolTipText=About...
+cmdQuitter.Caption=Exit
+cmdQuitter.ToolTipText=Disconnects VPN and exit
+cmdDemarrer.Caption=Start
+cmdDemarrer.ToolTipText=Connect VPN selected on network list
+cmdArreter.Caption=Stop
+cmdArreter.ToolTipText=Stop monitoring and disconnects VPN
+lbl(1).Caption=Softwares managed
+Frame2.Caption=Local IP of VPN
+listConnexionsReseaux.ToolTipText=Network availables. Select your VPN
+lbl(0).Caption=Network list
+lblIpVpn.Caption=Local IP of VPN : xxx.xxx.xxx.xxx
+lblStatut.Caption=Monitoring off
+mnuPopupTrucs.Caption=Menu Popup Del route
+mnuPopupDelRoute.Caption=Make VPN exclusive
+mnuPopup.Caption=Menu Popup
+mnuPopupAbout.Caption=About
+mnuPopupArreter.Caption=Stop VPN
+mnuPopupResetVPN.Caption=Reset VPN
+mnuPopupLog.Caption=Show log
+mnuPopupCheckUpdate.Caption=Check update
+mnuPopupWidget.Caption=Show the widget
+mnuPopupShowMe.Caption=Show the interface
+mnuPopupQuit.Caption=Exit
+
+
+ 
+[modGlobal]
+ 
+[frmAbout]
+frmAbout.Caption=About...
+cmdSiteWeb.Caption=Web site
+cmdQuit.Caption=Close
+lblInfo(0).Caption=Thank you for using this program. Protect your ass during disconnection of your VPN. Developed for free, you can thank the author with a donation. Go to web site for more infos.
+lblNotice.Caption=A word in FR
+lblURL(1).Caption=Give a donation
+lblURL(1).ToolTipText=Paypal
+lblURL(0).Caption=Last version and code source
+
+
+ 
+[modFichierINI]
+ 
+[modKillProcess]
+ 
+[modRasFunction]
+ 
+[frmMessageErreur]
+cmdQuitter.ToolTipText=Send error to author with the form at http://vpnlifeguard.blogspot.com
+
+
+ 
+[modGestionErreur]
+ 
+[modPingICMP2]
+ 
+[frmConfig]
+frmConfig.Caption=Config and options
+CheckLog.Caption=Disconnects to log
+CheckLog.ToolTipText=Save history of disconnections
+CheckWidget.Caption=Show the widget at startup
+CheckWidget.ToolTipText=Object which changes of color in function of connection
+CheckCloseAppliOnQuit.Caption=Close softwares managed on exit
+CheckIconQuit.Caption=Minimize instead of quit
+CheckIconQuit.ToolTipText=By clicking the X in the upper right, minimize the program icon in the systray rather than leave
+CheckAdressIPproblem.Caption=In case of trouble
+CheckAdressIPproblem.ToolTipText=Check this box if your VPN connected is not listed
+cmdAjouterAppli.Caption=Browse...
+CheckSecuTunnel.Caption=VPN exclusive
+CheckSecuTunnel.ToolTipText=Be sure to go through the VPN
+Label(5).Caption=Connection VPN exclusive
+labelInfoSecuTunnel.Caption=Be sure to go through the VPN. Makes the VPN connection by removing the exclusive route of the main internet connection. In this way, all data from your PC to the Internet necessarily pass through the VPN. The route is restored when disconnected to reconnect the VPN but then re-deleted. Technique known route via scripts Del / Add route. Requires to configure the gateway IP. The gateway is usually your internet box.
+CheckAutoReduire.Caption=Minimize on startup
+CheckAutoReduire.ToolTipText=Is reduced to an icon to launch the program
+cmdUpdate.Caption=Check the last version
+Label(4).Caption=Update
+checkDynamiqueIPvpn.Caption=VPN on IP dynamik
+ComboDefautIP.ToolTipText=Corresponds to the IP address of your PC
+cmdFermer.Caption=Close
+CheckAutoAppli.Caption=Run softwares managed
+CheckAutoAppli.ToolTipText=Run softwares checked on startup
+CheckAutoWin(1).Caption=Run on startup
+CheckAutoWin(1).ToolTipText=Run VPN connection on startup
+CheckAutoWin(0).Caption=Run with windows startup
+CheckAutoWin(0).ToolTipText=Run the program when Windows starts
+Label(9).Caption=Autorun
+Label(8).Caption=List 
+Label(7).Caption=Number : 
+Label(6).Caption=Softwares to managed
+cmdIpConfig.ToolTipText=Run IPCONFIG
+cmdListerIP.Caption=List IP
+cmdListerIP.ToolTipText=Get IP address of gateway and VPN connected
+ComboPasserelleIP.ToolTipText=Corresponds to the IP address of your Internet box. If the program fails to find it, then select 127.0.0.1
+Label(3).Caption=IP of the box 
+Label(0).Caption== of the router = the gateway
+ComboVpnIP.ToolTipText=Local IP address of the VPN
+Label(2).Caption=Local IP of VPN
+labelChoixIP.Caption=Select or validate IP addresses 
+Label(1).Caption=IP address
+LabelTutoURL.Caption=Go to help on web site
+Label(10).Caption=Divers
+
+
+ 
+[CCommonDialog]
+ 
+[CDownloader]
+ 
+[CGetOthersIp]
+ 
+[CSortArray2Col]
+ 
+[CGetIpgateway]
+ 
+[CIsAlreadyRunning]
+ 
+[CShortcut]
+ 
+[CDelIconSystray]
+ 
+[CRouteAddDell]
+ 
+[CIsInIde]
+ 
+[CMultithreadingRasdial]
+ 
+[CMultithreadingCallBack]
+
+
+ 
+[CMultithreadingSet]
+ 
+[modSystray]
+ 
+[frmCheckUpdate]
+LabelInfo.Caption=  Connection to SourceForge server...
+
+
+ 
+[CUpdate]
+ 
+[frmWidget]
+picBlack.ToolTipText=Connected
+picRed.ToolTipText=Disconnected
+cmdQuit.Caption=Exit
+
+
+ 
+[CWidget]
+[Strings]
+0001=IP address monitoring :
+0002=Closing...
+0003=Closing...
+0004=No log here. You can parameter this in config.
+0005=IP of VPN : 
+0006=  disconnect
+0007=  disconnects
+0008=Launching softwares...
+0009=  disconnect
+0010=  disconnects
+0011=Disconnected but connection...
+0012=Closing softwares...
+0013=Connection...
+0014=IP of VPN :  . . .
+0015=Connection ok
+0016=No VPN network detected. This program work only with VPN PPTP
+0017=
+0018=
+0019=Oops ! VPN not detected
+0020=Internet not reached
+0021=Wait for Internet...
+0022=Wait for Internet...
+0023=Monitoring off
+0024=Connection...
+0025=Connection impossible, try later.
+0026=ON
+0027=Refresh...
+0028=Stopping...
+0029=Disconnection...
+0030=Disconnected
+0031=Monitoring off
+0032=Monitoring off
+0033=First time, then
+0034=clic here
+0035=Monitoring off
+0036=Clic on 'Config' to list IP and select it for VPN
+0037=Closing :  
+0038=IP of VPN :  
+0039=IP of VPN :  
+0040=Monitoring off
+0041=You must run as administrator
+0042=Right clic on program... run as...
+0043=Don't rename the file. Run VpnLifeguard.exe
+0044= - error
+0045=New version. Do you want to get it ?
+0046=Update
+0047=In case of error, then update.
+0048=Update recommanded
+0049=It's ok, you have the last version ;-)
+0050=Update useless
+0051=If you don't wish to send the report, then click ok.
+0052=To send report, then click cancel.
+0053=Handle of ping error
+0054=Executables (*.exe)|*.exe|
+0055=Add software n°
+0056=Connect VPN, then click 'List'
+0057=Clear list
+0058=Browse...
+0059=dynamic IP = changes each connection. Check this box if the program fails to reconnect if disconnected.
+0060=If you wish config, then click cancel.
+0061=Select IP of VPN
+0062=Select IP of gateway or write it
+0063=Add your softwares to manage
+0064=Contact servers error
+0065=Err type : 
+0066=  Versions comparison...
+0067=  Last version online = 
+0068=New version available. Do you want to get it ?
+0069=Update
+0070=In case of error, then update.
+0071=Update recommanded
+0072=It's ok, you have last version ;-)
+0073=Update useless
+0074=Hide
+0075=Connected
+0076=Disconnected
+0077=Disconnected at
+0078=-
+

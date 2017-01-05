@@ -1,0 +1,145 @@
+Type=OleExe
+Reference=*\G{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}#1.0#0#C:\Windows\SysWOW64\wshom.ocx#Windows Script Host Object Model
+Reference=*\G{662901FC-6951-4854-9EB2-D9A2570F2B2E}#5.1#0#C:\Windows\system32\winhttp.dll#Microsoft WinHTTP Services, version 5.1
+Form=frmMain.frm
+Module=modGlobal; mGlobal.bas
+Form=frmAbout.frm
+Module=modFichierINI; mFichierINI.bas
+Module=modKillProcess; mKillProcess.bas
+Module=modRasFunction; mRasFunction.bas
+Form=frmMessageErreur.frm
+Module=modGestionErreur; mGestionErreur.bas
+Module=modPingICMP2; mPingICMP2.bas
+Form=frmConfig.frm
+Class=CCommonDialog; CommonDialog.cls
+Class=CDownloader; CDownloader.cls
+Class=CGetOthersIp; CGetOthersIp.cls
+Class=CSortArray2Col; CSortArray2Col.cls
+Class=CGetIpgateway; CGetIpgateway.cls
+Class=CIsAlreadyRunning; CIsAlreadyRunning.cls
+Class=CShortcut; CShortcut.cls
+Class=CDelIconSystray; CDelIconSystray.cls
+Class=CRouteAddDell; CRouteAddDell.cls
+Class=CIsInIde; CIsInIde.cls
+Class=CMultithreadingRasdial; CMultithreadingRasdial.cls
+Form=CMultithreadingCallBack.frm
+Class=CMultithreadingSet; CMultithreadingSet.cls
+Module=modSystray; mSystray.bas
+Form=frmCheckUpdate.frm
+Class=CUpdate; CUpdate.cls
+Form=frmWidget.frm
+Class=CWidget; CWidget.cls
+Module=modLanguageSupport; mLanguageSupport.bas
+ResFile32="XPManifest.res"
+IconForm="frmMain"
+Startup="Sub Main"
+HelpFile=""
+Title="VPN Lifeguard"
+ExeName32="VpnLifeguard.exe"
+Command32=""
+Name="vbpVpnLifeguard"
+HelpContextID="0"
+Description="VPN Lifeguard"
+CompatibleMode="0"
+MajorVer=1
+MinorVer=4
+RevisionVer=14
+AutoIncrementVer=0
+ServerSupportFiles=0
+VersionComments="Se protéger des déconnexions du VPN - http://vpnlifeguard.blogspot.com"
+VersionCompanyName="Philippe734"
+VersionFileDescription="VPN Lifeguard"
+VersionLegalCopyright="(C) 2010 philippe734 - GNU/GPL"
+VersionLegalTrademarks="(C) 2010 philippe734 - GNU/GPL"
+VersionProductName="VPN Lifeguard"
+CompilationType=-1
+OptimizationType=0
+FavorPentiumPro(tm)=0
+CodeViewDebugInfo=0
+NoAliasing=0
+BoundsCheck=-1
+OverflowCheck=-1
+FlPointCheck=-1
+FDIVCheck=-1
+UnroundedFP=0
+StartMode=0
+Unattended=0
+Retained=0
+ThreadPerObject=-1
+MaxNumberOfThreads=3
+DebugStartupOption=0
+
+[MS Transaction Server]
+AutoRefresh=1
+
+[TaskList]
+Num=2
+
+[TASK1]
+Description=CORRECTIONS
+Status=2
+Priority=1
+Comment=Nouveautés : - ajout d'options dans le menu du widget  Améliorations : - position de la fenetre sauvegardée  Bugs corrigés : - 1.4.12 - L'erreur 383 s'est produite dans la fenêtre frmConfig de la procédure TimerStart_Timer à la ligne 780 : Propriété 'Text' en lecture seule. - Position de la fenêtre non restauré en cas de réduction auto au démarrage.
+AssignedTo=
+
+[TASK2]
+Description=Bugs
+Status=0
+Priority=1
+Comment=Bugs : - L'infobulle du widget ne s'affiche pas après popup du menu clic droit. 
+
+[TASK3]
+Description=
+Status=
+Priority=
+Comment=
+AssignedTo=
+
+[TASK4]
+Description=
+Status=
+Priority=
+Comment=
+AssignedTo=
+
+[TASK5]
+Description=
+Status=
+Priority=
+Comment=
+AssignedTo=
+
+[TASK6]
+Description=
+Status=
+Priority=
+Comment=
+AssignedTo=
+
+[TASK7]
+Description=
+Status=
+Priority=
+Comment=
+AssignedTo=
+
+[TASK8]
+Description=
+Status=
+Priority=
+Comment=
+AssignedTo=
+
+[TASK9]
+Description=
+Status=
+Priority=
+Comment=
+AssignedTo=
+
+[TASK10]
+Description=
+Status=
+Priority=
+Comment=
+AssignedTo=
