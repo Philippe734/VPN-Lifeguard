@@ -17,9 +17,15 @@ Very useful for browsing or go behind a P2P VPN without being exposed during dis
 VPN Lifeguard is guaranteed free of virus, [report available here](https://www.virustotal.com/fr/file/fd9ea19dabb0835c394bb7cc474a779a902697180357e6ffb18faff933c69bb7/analysis/1289253720/)
 
 ## Download
-Portable version for Windows 7, 8, 10 : [HERE](https://github.com/Philippe734/VPN-Lifeguard/raw/master/Windows/1.4.14/VpnLifeguard.zip)
+Portable version for Windows 7, 8, 10 : [![Windows][2]][1]
 
-Linux Ubuntu/Debian/Mint : [HERE] (https://github.com/Philippe734/VPN-Lifeguard/raw/master/Linux/1.0.4/Setup_VPNLifeguard_for_Ubuntu.deb) 
+  [1]: https://github.com/Philippe734/VPN-Lifeguard/raw/master/Windows/1.4.14/VpnLifeguard.zip
+  [2]: https://cloud.githubusercontent.com/assets/24923693/21724562/26754b04-d435-11e6-9654-779c17c2ebcf.png
+
+Linux Ubuntu/Debian/Mint : [![Linux][2]][3]
+
+  [3]: https://github.com/Philippe734/VPN-Lifeguard/raw/master/Linux/1.0.4/Setup_VPNLifeguard_for_Ubuntu.deb
+
 
 ![youhou](https://cloud.githubusercontent.com/assets/24923693/21691776/43084e80-d37a-11e6-9571-5c6c60c19964.gif)
 
