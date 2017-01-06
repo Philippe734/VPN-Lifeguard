@@ -16,6 +16,10 @@ Very useful for browsing or go behind a P2P VPN without being exposed during dis
 
 VPN Lifeguard is guaranteed free of virus, [report available here](https://www.virustotal.com/fr/file/fd9ea19dabb0835c394bb7cc474a779a902697180357e6ffb18faff933c69bb7/analysis/1289253720/)
 
+
+![screenshot](https://cloud.githubusercontent.com/assets/24923693/21724985/c862e628-d436-11e6-8a80-de1ba45efb01.jpg)
+
+
 ## Download
 Portable version for Windows 7, 8, 10 : [![Windows][2]][1]
 
