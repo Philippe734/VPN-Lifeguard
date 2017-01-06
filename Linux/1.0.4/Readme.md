@@ -12,7 +12,7 @@ Application written in Visual Basic Gambas.
     $ sudo add-apt-repository ppa:gambas-team/gambas3
     $ sudo apt-get update 
   
-2.Download the package .deb of the application and install it.
+2.Download the package .deb of VPN Lifeguard below and install it.
 
 3.The dependancy for the Gambas language will be automatically installed.
 
