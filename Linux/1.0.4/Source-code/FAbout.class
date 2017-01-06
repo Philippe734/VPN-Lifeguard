@@ -1,0 +1,34 @@
+' Gambas class file
+
+Public Sub Form_Open()
+  
+  Dim sMsg As String
+  
+  sMsg = "Thank you for using this program, which protect your ass during disconnection of your VPN. Developed for free, you can thank the author with a donation. Go to web site for more infos. Programed in almost Visual Basic with Gambas for Linux."
+  
+  Me.Title = "About me"
+  
+  txtAbout.Text = smsg
+  
+  lblAppVersion.Text = "VPN Lifeguard " & Application.Version & " for Linux"
+  lblAuthor.Text = "Free open source GNU/GPL" & Chr$(10) & "by Philippe734 @ 2016"
+  
+  cmdWebSite.ToolTip = "http://vpnlifeguard.blogspot.com/p/english.html"
+  
+  cmdWebSite.SetFocus
+  
+End
+
+Public Sub cmdOK_Click()  
+  
+  Me.Close  
+  
+End
+
+Public Sub cmdWebSite_Click()
+
+  Dim sRet As String
+  Shell "xdg-open '" & cmdWebSite.ToolTip & "'" To sRet
+  
+End
+
