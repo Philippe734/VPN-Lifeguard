@@ -1,0 +1,45 @@
+' Gambas module file
+
+Public Function ReadIni(IniKey As String, vDEFAULT As Variant) As Variant
+
+  Dim hSettings As Settings
+  Dim aVariant As Variant
+
+  hSettings = New Settings(System.Home & "/" & ".vl-qemu.conf")
+  aVariant = hSettings[IniKey, vDEFAULT]
+  Return aVariant
+
+End
+
+Public Sub WriteIni(IniKey As String, aVariant As Variant)
+
+  Dim hSettings As Settings
+  hSettings = New Settings(System.Home & "/" & ".vl-qemu.conf")
+  hSettings[IniKey] = aVariant
+
+End
+
+Public Sub SaveConfig()
+  'Write config to ini file:
+
+  WriteIni("Setting.Boot", frmMain.cmbBoot.Index)
+  WriteIni("Setting.KeyLang", frmMain.cmbKeyLang.Index)
+  [snip]
+  WriteIni("ImagePath.HDD", frmMain.txtHDD.Text)
+  WriteIni("Network.Samba", frmMain.chkSamba.Value)
+  WriteIni("Network.SambaPath", frmMain.txtSamba.Text)
+
+End
+
+Public Sub ReadConfig()
+  'Read config from ini file:
+
+  frmMain.cmbBoot.Index = ReadIni("Setting.Boot", 0)
+  frmMain.cmbKeyLang.Index = ReadIni("Setting.KeyLang", 5)
+  frmMain.cmbRTCMode.Index = ReadIni("Setting.RTCMode", 0)
+  [snip]
+  frmMain.txtHDD.Text = ReadIni("ImagePath.HDD", "")
+  frmMain.chkSamba.Value = ReadIni("Network.Samba", 0)
+  frmMain.txtSamba.Text = ReadIni("Network.SambaPath", "")
+
+End

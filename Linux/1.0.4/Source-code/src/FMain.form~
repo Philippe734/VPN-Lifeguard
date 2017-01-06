@@ -1,0 +1,53 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,66,19)
+  Text = ("VPN Lifeguard for Linux")
+  Resizable = False
+  { cmdQuit Button
+    MoveScaled(49,11,16,4)
+    Text = ("Disconnect / Quit")
+  }
+  { lblStatusBar Label
+    MoveScaled(0,16,66,3)
+    Background = Color.Gray
+    Foreground = Color.White
+    Border = Border.Raised
+  }
+  { Frame2 Frame
+    MoveScaled(1,0,64,10)
+    Text = ("Applications managed")
+    { chkSofts1 CheckBox
+      MoveScaled(3,3,24,3)
+      Tag = "chkApplis"
+    }
+    { chkSofts2 CheckBox
+      MoveScaled(35,3,24,3)
+      Tag = "chkApplis"
+    }
+    { chkSofts3 CheckBox
+      MoveScaled(3,6,24,3)
+      Tag = "chkApplis"
+    }
+    { chkSofts4 CheckBox
+      MoveScaled(35,6,24,3)
+      Tag = "chkApplis"
+    }
+    { timerReload #Timer
+      #MoveScaled(56,1)
+      Delay = 15000
+    }
+  }
+  { cmdConfig Button
+    MoveScaled(27,11,16,4)
+    Text = ("Config")
+  }
+  { cmdAbout Button
+    MoveScaled(44,11,4,4)
+    Text = ("?")
+  }
+  { cmdDebug Button
+    MoveScaled(10,11,16,4)
+    Text = ("Debug")
+  }
+}

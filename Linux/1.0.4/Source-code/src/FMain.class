@@ -1,0 +1,252 @@
+' Gambas class file
+
+Private sVPNuuid As String ' ID of the VPNsRet connection
+Private sVPNname As String ' Name of VPN connection
+Private sApplis As String ' Name of the application in process
+Private sNumberApplis As String ' Number of applications
+Private bFlag As Boolean ' Flag of connection after disconnection
+Public pr As Process
+
+Public Sub Form_Open()
+
+  Dim sRet As String
+
+  ' get informations on connection to get name and vpn ID
+  Shell "nmcli -t -f TYPE,NAME,UUID c | grep vpn" To sRet
+  sRet = Mid(sRet, Len("vpn:") + 1)
+  sVPNname = Mid(sRet, 1, InStr(sRet, ":") - 1)
+  sVPNuuid = Mid(sRet, InStr(sRet, ":") + 1)
+
+  lblStatusBar.Text = "Disconnected"
+
+  cmdAbout.SetFocus
+
+  ' Read settings and set checkbox applications
+  ReadSettings
+
+  ' set monitoring on vpn connection
+  pr = Shell "dbus-monitor --system type='signal',interface='org.freedesktop.NetworkManager.VPN.Connection',member='VpnStateChanged'" For Read As "procDBusMonitor"
+
+  ' enable timer
+  timerReload.Delay = 1000 ' 1 second
+  timerReload.Enabled = True
+
+  lblStatusBar.Text = "Connection..."
+
+End
+
+Public Sub cmdConfig_Click()
+
+  Dim iApplis As Byte
+
+  If Message.Question("Do you want to modify the list of applications to manage ?", "Yes", "No") = 1 Then
+
+  ask:
+    sNumberApplis = InputBox("How many applications to manage ?", "Type a number")
+
+    ' check format value
+
+    If IsNumber(sNumberApplis) Then
+
+      Settings["Applications to manage/N"] = CByte(sNumberApplis)
+
+      For iApplis = 1 To 6
+
+        If iApplis <= CByte(sNumberApplis) Then
+
+          sApplis = InputBox("What is the name of the #" & iApplis & " application to manage ?" & Chr$(10) & " For example : transmission or firefox", "Type a name of application")
+
+        Else
+
+          sApplis = ""
+
+        Endif ' Number applis
+
+        Settings["Applications to manage/Appli #" & iApplis] = sApplis
+
+      Next ' next checkbox / application
+
+      ReadSettings ' and set checkbox
+
+    Else
+      Message("Please, type a number")
+      Goto ask
+    Endif
+
+  Endif ' Prompt yes/no
+
+End
+
+Public Sub cmdAbout_Click()
+  ' Show the about form
+
+  FAbout.ShowModal
+
+End
+
+Private Sub ReadSettings()
+  ' Read settings and set checkbox applications
+
+  Dim chk As Object, k As Byte
+
+  ' Get the number of applications to manage
+  sNumberApplis = Settings["Applications to manage/N", 0]
+
+  k = 1 ' initialize
+
+  ' For each checkbox of applications
+
+  For Each chk In FMain.Controls
+
+    ' If control is a checkbox
+    If chk.Tag = "chkApplis" Then
+
+      ' Get settings of applications'name
+      sApplis = Settings["Applications to manage/Appli #" & k, ""]
+
+      If k <= CByte(sNumberApplis) Then
+        ' Appli to manage
+        chk.Text = sApplis
+        chk.visible = True
+        chk.value = True
+      Else
+        ' No application
+        chk.Text = ""
+        chk.visible = False
+        chk.value = False
+      Endif
+
+      Inc k
+
+    Endif
+  Next
+
+End
+
+Public Sub timerReload_Timer()
+
+  Dim chk As Object
+  Dim sRet As String
+
+  ' Timer to check state of VPN connection
+  ' if connected = ok, nothing to do
+  ' if disconnected = connect and reload applis
+
+  timerReload.Delay = 10000 ' 10 seconds
+
+  ' get status of all connections
+  Shell "nmcli con status" To sRet
+
+  ' check state of vpn
+  If InStr(sRet, sVPNname) Then
+
+    ' connected = ok
+    lblStatusBar.Text = "Connected + monitoring"
+
+    If bFlag = True Then
+      ' after reconnection, reload applis
+      bFlag = False
+
+      Shell "notify-send 'VPN connected'"
+      lblStatusBar.Text = "Connected and reloading applications..."
+
+      For Each chk In FMain.Controls
+        ' each checkbox
+        If (chk.Tag = "chkApplis") And If (chk.Text <> "") And If (chk.value = True) Then
+          ' load applications
+          Shell "exec " & chk.Text
+        Endif
+      Next
+
+      lblStatusBar.Text = "Connected + monitoring"
+
+    Endif
+
+  Else
+
+    ' disconnected then reconnection   
+    
+    Wait 1 's
+    Shell "nmcli con up uuid " & sVPNuuid
+
+    ' flag that the vpn will be reconnected
+    bFlag = True
+
+  Endif
+
+End
+
+Public Sub cmdQuit_Click()
+
+  FMain.Close
+
+End
+
+Public Sub Form_Close()
+
+  Shell "notify-send 'Kill applications...'"
+
+  KillApplis
+
+  Shell "notify-send 'Disconnection...'"
+  
+  Wait 1
+
+  ' disconnect vpn
+  Shell "nmcli con down uuid " & sVPNuuid
+
+  Shell "notify-send 'Disconnected'"
+
+  ' kill the monitoring DBus
+  Flush
+  pr.Close
+  pr.Kill
+
+End
+
+Public Sub cmdDebug_Click()
+
+  Dim sRet As String
+
+  Shell "nmcli -t -f TYPE,NAME,UUID c | grep vpn"
+
+  Print sRet
+
+End
+
+Public Sub procDBusMonitor_Read()
+
+  Dim sLine As String
+
+  sLine = Read #Last, -256
+
+  If InStr(sLine, "uint32 3") Then
+    ' connected
+    Print "connected", Time
+  Endif
+
+  If InStr(sLine, "uint32 6") Or InStr(sLine, "uint32 7") Then
+    ' disconnected
+    KillApplis
+    Print "disconnected", Time
+    Shell "notify-send 'VPN disconnected' 'Connection...'"
+    lblStatusBar.Text = "Connection..."
+  Endif
+
+End
+
+Private Sub KillApplis()
+
+  Dim chk As Object, k As Byte
+
+  For Each chk In FMain.Controls
+    ' each checkbox
+    If (chk.Tag = "chkApplis") And If (chk.Text <> "") And If (chk.value = True) Then
+      For k = 1 To 3
+        ' close applications
+        Shell "pkill " & chk.Text
+      Next
+    Endif
+  Next
+
+End
