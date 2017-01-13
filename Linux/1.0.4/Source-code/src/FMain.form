@@ -45,8 +45,4 @@
     MoveScaled(44,11,4,4)
     Text = ("?")
   }
-  { cmdDebug Button
-    MoveScaled(10,11,16,4)
-    Text = ("Debug")
-  }
 }

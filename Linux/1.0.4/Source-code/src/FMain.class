@@ -27,10 +27,11 @@ Public Sub Form_Open()
   ' set monitoring on vpn connection
   pr = Shell "dbus-monitor --system type='signal',interface='org.freedesktop.NetworkManager.VPN.Connection',member='VpnStateChanged'" For Read As "procDBusMonitor"
 
+
   ' enable timer
   timerReload.Delay = 1000 ' 1 second
   timerReload.Enabled = True
-
+   
   lblStatusBar.Text = "Connection..."
 
 End
@@ -204,15 +205,7 @@ Public Sub Form_Close()
 
 End
 
-Public Sub cmdDebug_Click()
 
-  Dim sRet As String
-
-  Shell "nmcli -t -f TYPE,NAME,UUID c | grep vpn"
-
-  Print sRet
-
-End
 
 Public Sub procDBusMonitor_Read()
 
