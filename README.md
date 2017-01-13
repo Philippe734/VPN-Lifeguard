@@ -18,7 +18,7 @@ VPN Lifeguard is guaranteed free of virus, [report available here](https://www.v
 
 
 ![screenshot Windows](https://cloud.githubusercontent.com/assets/24923693/21724985/c862e628-d436-11e6-8a80-de1ba45efb01.jpg)
-![screenshot Linux](https://cloud.githubusercontent.com/assets/24923693/21725040/f8ba429e-d436-11e6-9069-67e2f95976e4.png)
+![screenshot Linux](https://cloud.githubusercontent.com/assets/24923693/21937000/b2242e88-d9b5-11e6-94d7-bca9ef2399b4.png)
 
 ## Download
 Portable version for Windows 7, 8, 10 (1 MB) : [![Windows][2]][1]
