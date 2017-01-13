@@ -21,12 +21,12 @@ VPN Lifeguard is guaranteed free of virus, [report available here](https://www.v
 ![screenshot Linux](https://cloud.githubusercontent.com/assets/24923693/21725040/f8ba429e-d436-11e6-9069-67e2f95976e4.png)
 
 ## Download
-Portable version for Windows 7, 8, 10 : [![Windows][2]][1]
+Portable version for Windows 7, 8, 10 (1 MB) : [![Windows][2]][1]
 
   [1]: https://github.com/Philippe734/VPN-Lifeguard/raw/master/Windows/1.4.14/VpnLifeguard.zip
   [2]: https://cloud.githubusercontent.com/assets/24923693/21724562/26754b04-d435-11e6-9654-779c17c2ebcf.png
 
-Linux Ubuntu/Debian/Mint : [![Linux][2]][3]
+Linux Ubuntu/Debian/Mint (1 MB) : [![Linux][2]][3]
 
   [3]: https://github.com/Philippe734/VPN-Lifeguard/raw/master/Linux/1.0.4/Setup_VPNLifeguard_for_Ubuntu.deb
 
