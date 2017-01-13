@@ -1,6 +1,6 @@
 # VPN Lifeguard for Linux
 
-![screenshot Linux](https://cloud.githubusercontent.com/assets/24923693/21725040/f8ba429e-d436-11e6-9069-67e2f95976e4.png)
+![screenshot Linux](https://cloud.githubusercontent.com/assets/24923693/21937000/b2242e88-d9b5-11e6-94d7-bca9ef2399b4.png)
 
 
 ## Install
