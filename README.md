@@ -2,7 +2,7 @@
 
 Application to protect yourself when your VPN disconnects
 
-Free & open source application to protect yourself when your VPN disconnects. It blocks Internet access any others specified applications. It prevents unsecured connections after your VPN connection goes down. VPN Lifeguard will close down the specified applications and automatically reconnect your VPN. Then, reload applications when reconnecting the VPN.
+Free & open source application to protect your privacy when your VPN disconnects. It blocks Internet access any others specified applications. It prevents unsecured connections after your VPN connection goes down. VPN Lifeguard will close down the specified applications and automatically reconnect your VPN. Then, reload applications when reconnecting the VPN.
 
 
 ## Characteristic
@@ -30,6 +30,21 @@ Linux Ubuntu/Debian/Mint : [![Linux][2]][3]
 
   [3]: https://github.com/Philippe734/VPN-Lifeguard/raw/master/Linux/1.0.4/Setup_VPNLifeguard_for_Ubuntu.deb
 
+
+### Install for Linux
+
+Application written in Visual Basic Gambas. 
+
+1.Open terminal and add the PPA for the language Gambas
+
+    $ sudo add-apt-repository ppa:gambas-team/gambas3
+    $ sudo apt-get update 
+  
+2.Download the package .deb of the application below and install it.
+
+3.The dependancy for the Gambas language will be automatically installed.
+
+## Profile
 
 ![youhou](https://cloud.githubusercontent.com/assets/24923693/21691776/43084e80-d37a-11e6-9571-5c6c60c19964.gif)
 
