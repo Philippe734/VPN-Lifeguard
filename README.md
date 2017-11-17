@@ -51,6 +51,7 @@ Application written in Visual Basic Gambas.
 If you want to reward my work, or thank me, then you can [donate](http://vpnlifeguard.blogspot.fr/p/faire-un-don.html) a few dollars [HERE](http://vpnlifeguard.blogspot.fr/p/faire-un-don.html) and I'll be very happy!
 
 ### VPN Lifeguard official website >>> [LINK](http://vpnlifeguard.blogspot.fr/p/english.html)
+### Alternative solution : VPNDemon for Linux >>> [LINK](https://github.com/primaryobjects/vpndemon)
 
 .
 
