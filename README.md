@@ -35,14 +35,20 @@ Linux Ubuntu/Debian/Mint (1 MB) : [![Linux][2]][3]
 
 Application written in Visual Basic Gambas. 
 
-1.Open terminal and add the PPA for the language Gambas
-
-    $ sudo add-apt-repository ppa:gambas-team/gambas3
-    $ sudo apt-get update 
-  
-2.Download the package .deb of the application below and install it.
-
-3.The dependancy for the Gambas language will be automatically installed.
+1. Open terminal and add the PPA for the Gambas language support :
+  ```
+  $ sudo add-apt-repository ppa:gambas-team/gambas3
+  $ sudo apt-get update 
+  ```
+2. Download the package .deb and install it :
+  ```
+  $ sudo dpkg -i ~/Downloads/Setup_VPNLifeguard_for_Ubuntu.deb
+  ```
+The dependancy for the Gambas language will be automatically installed.
+The application is not in the PPA and can't be install with a classic apt :
+  ```
+  $ sudo apt install setup_vpnlifeguard_for_ubuntu # <<< don't work
+  ```
 
 ## Profile
 
