@@ -16,6 +16,8 @@ Very useful for browsing or go behind a P2P VPN without being exposed during dis
 
 VPN Lifeguard is guaranteed free of virus, [report available here](https://www.virustotal.com/fr/file/fd9ea19dabb0835c394bb7cc474a779a902697180357e6ffb18faff933c69bb7/analysis/1289253720/)
 
+A newer version written in VB.Net is here: https://github.com/t753/VPN-Lifeguard/tree/master/Windows/VPN%20Lifeguard%20VB.Net
+
 
 ![screenshot Windows](https://cloud.githubusercontent.com/assets/24923693/21724985/c862e628-d436-11e6-8a80-de1ba45efb01.jpg)
 ![screenshot Linux](https://cloud.githubusercontent.com/assets/24923693/21937000/b2242e88-d9b5-11e6-94d7-bca9ef2399b4.png)
