@@ -1,12 +1,12 @@
 # VPN Lifeguard
 
-Application to protect yourself when your VPN disconnects
+Application to protect ~~your ass~~ yourself when your VPN disconnects
 
 Free & open source application to protect your privacy when your VPN disconnects. It blocks Internet access any others specified applications. It prevents unsecured connections after your VPN connection goes down. VPN Lifeguard will close down the specified applications and automatically reconnect your VPN. Then, reload applications when reconnecting the VPN.
 
 
 ## Characteristic
-- Blocking traffic (P2P, Firefox...) in case of disconnection of the VPN
+- Blocking traffic (Torrent, P2P, Firefox...) in case of disconnection of the VPN
 - Be sure to go through the VPN by delete the main route internet
 - Automatically reconnect the VPN
 - Reload applications when VPN reconnected
