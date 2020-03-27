@@ -18,8 +18,8 @@ VPN Lifeguard is guaranteed free of virus, [report available here](https://www.v
 
 ## Update
 
-2020.03: A newer version and more robust for Linux is available here: https://github.com/t753/VPN-Lifeguard/tree/master/Linux
-A newer version written in VB.Net is here: https://github.com/t753/VPN-Lifeguard/tree/master/Windows/VPN%20Lifeguard%20VB.Net
+- 2020.03: A newer version and more robust for Linux is here: https://github.com/t753/VPN-Lifeguard/tree/master/Linux
+- 2019.07: A newer version written in VB.Net for Windows is here: https://github.com/t753/VPN-Lifeguard/tree/master/Windows/VPN%20Lifeguard%20VB.Net
 
 
 ![screenshot Windows](https://cloud.githubusercontent.com/assets/24923693/21724985/c862e628-d436-11e6-8a80-de1ba45efb01.jpg)
