@@ -1,0 +1,3 @@
+I'm very happy to release my app in AppImage after almost ten years!
+
+Fix: using of "nmcli con show --active | grep -i vpn" instead of "nmcli con status" as it deprecadet since many years
